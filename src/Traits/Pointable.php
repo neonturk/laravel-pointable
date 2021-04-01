@@ -42,7 +42,7 @@ trait Pointable
      */
     public function addPoints($amount, $message, $data = null)
     {
-        return (new Transaction())->addTransaction($this, $amount, $message, $data = null);
+        return (new Transaction())->addTransaction($this, $amount, $message, $data);
     }
 
     /**
@@ -54,7 +54,7 @@ trait Pointable
      */
     public function subPoints($amount, $message, $data = null)
     {
-        return (new Transaction())->addTransaction($this, -$amount, $message, $data = null);
+        return (new Transaction())->addTransaction($this, -$amount, $message, $data);
     }
 
 }
